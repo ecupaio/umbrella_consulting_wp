@@ -1,0 +1,45 @@
+//Bucket Fonts
+@font-face {
+  font-family: "Gotham-Bold";
+  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.eot");
+  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.otf") format("otf"),
+  url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.svg") format('svg'),
+  url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.ttf") format('ttf'),
+  url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GothamBook";
+  src: url("https://frontend-assets.dnc.org/fonts/GothamBook.eot");
+  src: url("https://frontend-assets.dnc.org/fonts/GothamRounded-Book.otf") format("otf"),
+  url("https://frontend-assets.dnc.org/fonts/GothamBook.ttf") format('ttf'),
+  url("https://frontend-assets.dnc.org/fonts/GothamBook.svg") format('svg'),
+  url("https://frontend-assets.dnc.org/fonts/GothamBook.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+//Fonts
+$header-font: 'Gotham-Bold', sans-serif;
+$body-font: 'GothamBook', sans-serif;
+
+
+//Brand Colors
+$brand_lt_blue: #00AEF3;
+$brand_dk_blue: #0F2446;
+$brand_alt_blue: #00589C;
+$brand_white: #fff;
+$brand_red: #E31818;
+$brand_dk_red: #841618;
+$brand_yellow: #FFDD00;
+$brand_orange: #F15822;
+$brand_gray: #F6F6F6;
+$brand_black: #000;
+$brand_teal: #00a87d;
+$brand_green: #29763B;
+$brand_purple: #A4288C;
+$brand_dk_purple: #4D2073;
