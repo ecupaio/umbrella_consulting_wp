@@ -170,15 +170,12 @@ Either pass the px number through individually, or set it as a variable */
 }
 @mixin bodyPadding($body-padding) {
 	#main {
-		.main-body {
-			padding: $body-padding;
-		}
+		padding: $body-padding;
+
 	}
 	@media screen and (max-width: $size-medium) {
         #main {
-            .main-body {
-                padding: $body-padding-mobile;
-            }
+			padding: $body-padding-mobile;
         }
     }
 }

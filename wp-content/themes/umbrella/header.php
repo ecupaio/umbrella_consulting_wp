@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Title and Meta Text -->
-    <title>Single Page Template</title>
-    <meta content="Template for single page microsites" name="description">
+    <title><?php bloginfo('name'); ?></title>
+    <meta content="<?php bloginfo('description’'); ?>" name="description">
     <!-- Facebook Meta -->
     <meta property="og:url" content="Site URL">
     <meta property="og:type" content="website">
@@ -38,5 +38,6 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <h1> Header</h1>
+            <h1><?php bloginfo('name'); ?></h1>
+            <div><?php bloginfo('description’'); ?></div>
         </div>

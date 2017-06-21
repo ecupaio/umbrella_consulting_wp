@@ -52,11 +52,11 @@ Either pass the px number through individually, or set it as a variable */
 #header {
   padding: 1em; }
 
-#main .main-body {
+#main {
   padding: 1em 3em; }
 
 @media screen and (max-width: 768px) {
-  #main .main-body {
+  #main {
     padding: 1em; } }
 
 #footer {
