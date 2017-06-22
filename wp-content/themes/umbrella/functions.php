@@ -62,3 +62,13 @@ function custom_post_type() {
 */
 
 add_action( 'init', 'custom_post_type', 0 );
+function wptuts_scripts_basic()
+{
+
+    // Register the script like this for a theme:
+    wp_register_script( 'custom-script', get_template_directory_uri() . '/js/theme_functions.min.js', '','',true );
+
+    // For either a plugin or a theme, you can then enqueue the script:
+    wp_enqueue_script( 'custom-script' );
+}
+add_action( 'wp_enqueue_scripts', 'wptuts_scripts_basic' );

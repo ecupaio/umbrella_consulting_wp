@@ -1,6 +1,7 @@
 <div id="footer">
-    
+
 </div>
 <!-- Scripts-->
-<script src="js/theme_functions.min.js"></script>
+
+<?php wp_footer(); ?>
 </body>

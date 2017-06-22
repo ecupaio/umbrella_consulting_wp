@@ -1,14 +1,10 @@
-//Custom Styles
-//Use this sheet to add your custom touches to the core scss. Brand colors are listed below:
-//$brand_lt_blue
-//$brand_dk_blue
-//$brand_white
-//$brand_red
-//$brand_yellow
-//$brand_gray
-
 //Theme Colors
-//Use the brand colors for your theme colors
+$primary_color: #02416D;
+$alt_color: #FB9324;
+$text_color: #333;
+$link_color: #41CBEB;
+$white: #fff;
+$gray: #ccc;
 //Body and Heading text Colors
 $theme_body: $brand_dk_blue;
 $theme_body_link: $brand_lt_blue;
@@ -20,13 +16,13 @@ $theme_footer_txt: $brand_white;
 $copyright_link: $brand_lt_blue;
 $copyright_link_hover: $brand_white;
 //Header Colors
-$theme_header_bg: $brand_lt_blue;
-$theme_header_txt: $brand_white;
+$theme_header_bg: $primary_color;
+$theme_header_txt: $white;
 //Button Colors
-$theme_button_bg: $brand_dk_blue;
-$theme_button_txt: $brand_white;
-$hover_button_bg: $brand_dk_blue;
-$hover_button_txt: $brand_white;
+$theme_button_bg: $alt_color;
+$theme_button_txt: $white;
+$hover_button_bg: $white;
+$hover_button_txt: $alt_color;
 //BSD Form Colors
 $theme_form_bg: $brand_gray;
 $theme_form_txt: $brand_black;
@@ -39,8 +35,8 @@ $size-small: 568px;
 //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
-$body-padding: 1em 3em;
-$body-padding-mobile: 1em;
+$body-padding: 0;
+$body-padding-mobile: 0;
 $footer-padding: 1em;
 $transition_type: all .7s ease;
 //Mixins
@@ -50,3 +46,95 @@ $transition_type: all .7s ease;
 @include bodyPadding($body-padding);
 @include footerPadding($footer-padding);
 //Start Theme Customizations below:
+#services {
+    #services-slides {
+        overflow: hidden;
+        .slide {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: $white;
+            &:nth-child(odd) {
+                background-color: $primary_color;
+                .slide-inner {
+                    background-color: rgba($primary_color,0.8);
+                }
+            }
+            &:nth-child(even) {
+                background-color: $alt_color;
+                .slide-inner {
+                    background-color: rgba($alt_color,0.8);
+                }
+            }
+            .slide-inner {
+                @include flexbox;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 1em 3em;
+                min-height: 50vh;
+                .slide-content {
+                    .slide-title {
+                        text-transform: uppercase;
+                        font-family: $header_font;
+                        font-size: 2em;
+                    }
+
+                }
+            }
+        }
+        .slick-next {
+            right: 0.5rem;
+        }
+        .slick-prev {
+            left: 0.5rem;
+            z-index: 10;
+        }
+    }
+    #services-controls {
+        overflow: hidden;
+        .slide-control {
+            background: $white;
+            height: 10em;
+            text-align: center;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            border-width: 0 1px;
+            border-style: solid;
+            border-color: $gray;
+            color: $gray;
+            outline: none;
+            padding: 1em;
+            @include transition;
+            position: relative;
+
+            .slide-highlight {
+                height: 3px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background-color: $link_color;
+                transform: scaleX(0);
+                -webkit-transform: scaleX(0);
+                transform-origin: center;
+                -webkit-transform-origin: center;
+                @include custom_transition(transform 0.5s ease);
+
+            }
+            &.slick-current {
+                color: $link_color;
+                .slide-highlight {
+                    transform: scaleX(1);
+                    -webkit-transform: scaleX(1);
+
+                }
+            }
+            @include bp-medium($size-large){
+                transform: translateX(-50%);
+                -webkit-transform: translateX(-50%);
+            }
+
+        }
+    }
+}

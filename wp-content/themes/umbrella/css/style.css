@@ -19,14 +19,14 @@ Description: Under my umbrella ella ella ey
 
 .pure-button {
   border-radius: 0;
-  background-color: #0F2446;
+  background-color: #FB9324;
   color: #fff;
   white-space: normal;
   font-family: "Gotham-Bold", sans-serif; }
   .pure-button:hover, .pure-button:focus {
     background-image: none;
-    background-color: #0F2446;
-    color: #fff;
+    background-color: #fff;
+    color: #FB9324;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -53,25 +53,109 @@ Either pass the px number through individually, or set it as a variable */
   padding: 1em; }
 
 #main {
-  padding: 1em 3em; }
+  padding: 0; }
 
 @media screen and (max-width: 768px) {
   #main {
-    padding: 1em; } }
+    padding: 0; } }
 
 #footer {
   padding: 1em; }
 
+#services #services-slides {
+  overflow: hidden; }
+  #services #services-slides .slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff; }
+    #services #services-slides .slide:nth-child(odd) {
+      background-color: #02416D; }
+      #services #services-slides .slide:nth-child(odd) .slide-inner {
+        background-color: rgba(2, 65, 109, 0.8); }
+    #services #services-slides .slide:nth-child(even) {
+      background-color: #FB9324; }
+      #services #services-slides .slide:nth-child(even) .slide-inner {
+        background-color: rgba(251, 147, 36, 0.8); }
+    #services #services-slides .slide .slide-inner {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1em 3em;
+      min-height: 50vh; }
+      #services #services-slides .slide .slide-inner .slide-content .slide-title {
+        text-transform: uppercase;
+        font-family: "Gotham-Bold", sans-serif;
+        font-size: 2em; }
+  #services #services-slides .slick-next {
+    right: 0.5rem; }
+  #services #services-slides .slick-prev {
+    left: 0.5rem;
+    z-index: 10; }
+
+#services #services-controls {
+  overflow: hidden; }
+  #services #services-controls .slide-control {
+    background: #fff;
+    height: 10em;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #ccc;
+    color: #ccc;
+    outline: none;
+    padding: 1em;
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease;
+    position: relative; }
+    #services #services-controls .slide-control .slide-highlight {
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #41CBEB;
+      transform: scaleX(0);
+      -webkit-transform: scaleX(0);
+      transform-origin: center;
+      -webkit-transform-origin: center;
+      transition: transform 0.5s ease;
+      -webkit-transition: transform 0.5s ease;
+      -moz-transition: transform 0.5s ease;
+      -o-transition: transform 0.5s ease; }
+    #services #services-controls .slide-control.slick-current {
+      color: #41CBEB; }
+      #services #services-controls .slide-control.slick-current .slide-highlight {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1); }
+    @media only screen and (max-width: 1024px) {
+      #services #services-controls .slide-control {
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%); } }
+
 .pure-button {
   border-radius: 0;
-  background-color: #0F2446;
+  background-color: #FB9324;
   color: #fff;
   white-space: normal;
   font-family: "Gotham-Bold", sans-serif; }
   .pure-button:hover, .pure-button:focus {
     background-image: none;
-    background-color: #0F2446;
-    color: #fff;
+    background-color: #fff;
+    color: #FB9324;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -81,14 +165,14 @@ Either pass the px number through individually, or set it as a variable */
 Either pass the px number through individually, or set it as a variable */
 .pure-button {
   border-radius: 0;
-  background-color: #0F2446;
+  background-color: #FB9324;
   color: #fff;
   white-space: normal;
   font-family: "Gotham-Bold", sans-serif; }
   .pure-button:hover, .pure-button:focus {
     background-image: none;
-    background-color: #0F2446;
-    color: #fff;
+    background-color: #fff;
+    color: #FB9324;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -113,14 +197,14 @@ body {
   position: relative; }
 
 #header {
-  background-color: #00AEF3;
+  background-color: #02416D;
   color: #fff;
   text-align: center;
   -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
   -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
   box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5); }
   #header h1, #header h2, #header h3, #header h4, #header h5 {
-    background-color: #00AEF3;
+    background-color: #02416D;
     color: #fff; }
 
 /* fix for IE and Firefox responsiveness */
