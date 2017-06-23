@@ -11,12 +11,12 @@ $theme_body_link: $brand_lt_blue;
 $theme_body_link_hover: $brand_dk_blue;
 $theme_heading: $brand_dk_blue;
 //Footer Colors
-$theme_footer_bg: $brand_dk_blue;
+$theme_footer_bg: $primary_color;
 $theme_footer_txt: $brand_white;
-$copyright_link: $brand_lt_blue;
-$copyright_link_hover: $brand_white;
+$copyright_link: $link_color;
+$copyright_link_hover: $white;
 //Header Colors
-$theme_header_bg: $primary_color;
+$theme_header_bg: rgba($primary_color,1);
 $theme_header_txt: $white;
 //Button Colors
 $theme_button_bg: transparent;
@@ -59,6 +59,7 @@ body.customize-support {
     min-height: 4em;
     z-index: 100;
 
+    @include custom_transition(background-color 0.5s ease);
     a {
         color: $white;
     }
@@ -83,12 +84,42 @@ body.customize-support {
         a.nav-link {
             font-weight: 400;
             margin: 0 0.5em;
-            @include bp-medium($size-medium) {}
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: -2px;
+                left: 0;
+                background-color: $white;
+                visibility: hidden;
+                -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+
+            &:hover, &.active {
+                &:before {
+                    visibility: visible;
+                    -webkit-transform: scaleX(1);
+                    transform: scaleX(1);
+                }
+            }
+
+        }
+    }
+    @include bp-small($size-small) {
+        .logo,.nav {
+            float: none;
+            width: 100%;
+            text-align: center;
         }
     }
 
     &.active {
-        background: rgba($primary_color,0.7);
+        background-color: rgba($primary_color,0.7);
     }
 }
 
@@ -119,6 +150,7 @@ body.customize-support {
     color: $white;
     position: relative;
     vertical-align: middle;
+    font-weight: 400;
     &::after,
     &::before {
         box-sizing: inherit;
@@ -339,9 +371,13 @@ body.customize-support {
                     transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
                 }
             }
-            @include bp-medium($size-large) {
+            @include bp-large($size-large) {
                 transform: translateX(-50%);
                 -webkit-transform: translateX(-50%);
+            }
+            @include bp-medium($size-medium) {
+                transform: translateX(0);
+                -webkit-transform: translateX(0);
             }
         }
     }

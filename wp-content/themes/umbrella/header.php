@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Title and Meta Text -->
     <title><?php bloginfo('name'); ?></title>
-    <meta content="<?php bloginfo('description’'); ?>" name="description">
+    <meta content="<?php bloginfo('description'); ?>" name="description">
     <!-- Facebook Meta -->
     <meta property="og:url" content="Site URL">
     <meta property="og:type" content="website">
@@ -47,9 +47,10 @@
         <div id="header">
             <div class="logo">
                 <?php the_custom_logo(); ?>
+                <?php get_site_icon_url(); ?>
             </div>
             <div class="nav">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#about">Home</a>
                 <a class="nav-link" href="#services">Services</a>
                 <a class="nav-link" href="#bio">Bio</a>
                 <a class="nav-link" href="#contact">Contact</a>

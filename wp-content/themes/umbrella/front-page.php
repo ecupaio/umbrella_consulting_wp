@@ -7,7 +7,7 @@
                 <div class="section-text">
                     <?php the_custom_logo(); ?>
                     <?php the_field('about');?>
-                    <div class="pure-button">What we do</div>
+                    <a class="pure-button anchor-link" href="#services">What we do</a>
                 </div>
             </div>
         </div>
