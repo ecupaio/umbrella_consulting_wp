@@ -4,68 +4,242 @@ $alt_color: #FB9324;
 $text_color: #333;
 $link_color: #41CBEB;
 $white: #fff;
-$gray: #ccc;
-//Body and Heading text Colors
+$gray: #ccc; //Body and Heading text Colors
 $theme_body: $brand_dk_blue;
 $theme_body_link: $brand_lt_blue;
 $theme_body_link_hover: $brand_dk_blue;
-$theme_heading: $brand_dk_blue;
-//Footer Colors
+$theme_heading: $brand_dk_blue; //Footer Colors
 $theme_footer_bg: $brand_dk_blue;
 $theme_footer_txt: $brand_white;
 $copyright_link: $brand_lt_blue;
-$copyright_link_hover: $brand_white;
-//Header Colors
+$copyright_link_hover: $brand_white; //Header Colors
 $theme_header_bg: $primary_color;
-$theme_header_txt: $white;
-//Button Colors
-$theme_button_bg: $alt_color;
+$theme_header_txt: $white; //Button Colors
+$theme_button_bg: transparent;
 $theme_button_txt: $white;
-$hover_button_bg: $white;
-$hover_button_txt: $alt_color;
-//BSD Form Colors
+$hover_button_bg: transparent;
+$hover_button_txt: $white; //BSD Form Colors
 $theme_form_bg: $brand_gray;
 $theme_form_txt: $brand_black;
 $theme_form_btn_bg: $brand_dk_blue;
-$theme_form_btn_txt: $brand_white;
-//Mobile Breakpoints
+$theme_form_btn_txt: $brand_white; //Mobile Breakpoints
 $size-large: 1024px;
 $size-medium: 768px;
-$size-small: 568px;
-//Padding for Sections and Grids
+$size-small: 568px; //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
 $body-padding: 0;
 $body-padding-mobile: 0;
 $footer-padding: 1em;
-$transition_type: all .7s ease;
-//Mixins
+$transition_type: all 0.7s ease; //Mixins
 @import "mixins";
 @include gridGutters($gutter-padding);
 @include headerPadding($header-padding);
 @include bodyPadding($body-padding);
-@include footerPadding($footer-padding);
-//Start Theme Customizations below:
+@include footerPadding($footer-padding); //Start Theme Customizations below:
+
+body.customize-support {
+    #header {
+        margin-top: 20px;
+    }
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 4em;
+    z-index: 100;
+
+    a {
+        color: $white;
+    }
+
+    .logo {
+        float: left;
+        height: 2em;
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    .nav {
+        float: right;
+        font-family: $header_font;
+        text-transform: uppercase;
+        margin-top: 0.75em;
+        font-size: 0.75em;
+
+        a.nav-link {
+            font-weight: 400;
+            margin: 0 0.5em;
+            @include bp-medium($size-medium) {}
+        }
+    }
+
+    &.active {
+        background: rgba($primary_color,0.7);
+    }
+}
+
+.section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: auto;
+    @include headings() {
+        text-transform: uppercase;
+        margin-top: 0;
+    }
+}
+
+#about,
+#bio {
+    color: $white;
+    @include headings() {
+        color: $white;
+    }
+}
+
+.pure-button {
+    text-transform: uppercase;
+    font-family: $header-font;
+    box-shadow: inset 0 0 0 2px $white;
+    color: $white;
+    position: relative;
+    vertical-align: middle;
+    &::after,
+    &::before {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    transition: color 0.25s;
+
+    &::after,
+    &::before {
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+    }
+    &::after,
+    &::before {
+        top: 0;
+        left: 0;
+    }
+
+    &:hover {
+        color: $link_color;
+    }
+    // Hover styles
+    &:hover::after,
+    &:hover::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    &:hover::before {
+        border-top-color: $link_color;
+        border-right-color: $link_color;
+        transition:width 0.25s ease-out,
+        height 0.25s ease-out 0.25s;
+    }
+
+    &:hover::after {
+        border-bottom-color: $link_color;
+        border-left-color: $link_color;
+        transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+    }
+}
+
+#about {
+    .section-content {
+        min-height: 100vh;
+        background: rgba(#000,0.5);
+        padding: 1em 3em;
+        @include flexbox;
+        justify-content: center;
+        align-items: center;
+
+        .section-text {
+            text-align: center;
+        }
+    }
+}
+
+#bio {
+    position: relative;
+    background-size: cover;
+    background-position: right top;
+    background-attachment: local;
+    padding: 0;
+    background-color: $primary_color;
+
+    .section-content {
+        background: linear-gradient(to right, rgba($primary_color,0.8) 50%, transparent);
+        width: 100%;
+        z-index: 10;
+        overflow: auto;
+
+        .section-text {
+            padding: 1em 2em;
+            width: 50%;
+        }
+    }
+    color: $white;
+    @include bp-medium($size-medium) {
+        background-size: auto 100%;
+
+        .section-content {
+            background: rgba($primary_color,0.5);
+
+            .section-text {
+                width: 100%;
+                margin-top: 10em;
+            }
+        }
+    }
+    @include bp-small($size-small) {
+        background-position: 90% top;
+
+        .section-content .section-text {
+            margin-top: 15em;
+        }
+    }
+}
+
 #services {
     #services-slides {
         overflow: hidden;
+
         .slide {
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
             color: $white;
+
             &:nth-child(odd) {
                 background-color: $primary_color;
+
                 .slide-inner {
                     background-color: rgba($primary_color,0.8);
                 }
             }
+
             &:nth-child(even) {
                 background-color: $alt_color;
+
                 .slide-inner {
                     background-color: rgba($alt_color,0.8);
                 }
             }
+
             .slide-inner {
                 @include flexbox;
                 align-items: center;
@@ -73,26 +247,29 @@ $transition_type: all .7s ease;
                 text-align: center;
                 padding: 1em 3em;
                 min-height: 50vh;
+
                 .slide-content {
                     .slide-title {
                         text-transform: uppercase;
                         font-family: $header_font;
                         font-size: 2em;
                     }
-
                 }
             }
         }
+
         .slick-next {
             right: 0.5rem;
         }
+
         .slick-prev {
             left: 0.5rem;
             z-index: 10;
         }
     }
+
     #services-controls {
-        overflow: hidden;
+        //overflow: hidden;
         .slide-control {
             background: $white;
             height: 10em;
@@ -100,41 +277,66 @@ $transition_type: all .7s ease;
             @include flexbox;
             align-items: center;
             justify-content: center;
-            border-width: 0 1px;
-            border-style: solid;
-            border-color: $gray;
             color: $gray;
+            font-family: $header_font;
+            text-transform: uppercase;
             outline: none;
             padding: 1em;
-            @include transition;
-            position: relative;
 
-            .slide-highlight {
-                height: 3px;
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                background-color: $link_color;
-                transform: scaleX(0);
-                -webkit-transform: scaleX(0);
-                transform-origin: center;
-                -webkit-transform-origin: center;
-                @include custom_transition(transform 0.5s ease);
-
+            &:hover {
+                cursor: pointer;
             }
+            position: relative;
+            vertical-align: middle;
+            transition: color 0.25s;
+            -webkit-transition: color 0.25s;
+
+            &::after,
+            &::before {
+                // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+                border: 2px solid transparent;
+                width: 0;
+                height: 0;
+            }
+            // This covers the top & right borders (expands right, then down)
+            &::before {
+                top: 0;
+                left: 0;
+            }
+            // And this the bottom & left borders (expands left, then up)
+            &::after {
+                bottom: 0;
+                right: 0;
+            }
+
             &.slick-current {
                 color: $link_color;
-                .slide-highlight {
-                    transform: scaleX(1);
-                    -webkit-transform: scaleX(1);
+                // Hover styles
+                &::after,
+                &::before {
+                    width: 100%;
+                    height: 100%;
+                }
 
+                &::before {
+                    border-top-color: $link_color; // Make borders visible
+                    border-right-color: $link_color;
+                    transition:width 0.25s ease-out,// Width expands first
+                    height 0.25s ease-out 0.25s; // And then height
+                }
+
+                &::after {
+                    border-bottom-color: $link_color; // Make borders visible
+                    border-left-color: $link_color;
+                    transition:border-color 0s ease-out 0.5s,// Wait for ::before to finish before showing border
+                    width 0.25s ease-out 0.5s,// And then exanding width
+                    height 0.25s ease-out 0.75s; // And finally height
                 }
             }
-            @include bp-medium($size-large){
+            @include bp-medium($size-large) {
                 transform: translateX(-50%);
                 -webkit-transform: translateX(-50%);
             }
-
         }
     }
 }

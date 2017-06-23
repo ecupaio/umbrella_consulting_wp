@@ -28,6 +28,8 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,400i,700,700i" rel="stylesheet">
     <!-- Favicon -->
 
     <!-- Jquery -->
@@ -43,6 +45,13 @@
 <body>
     <div id="wrapper">
         <div id="header">
-            <h1><?php bloginfo('name'); ?></h1>
-            <div><?php bloginfo('description’'); ?></div>
+            <div class="logo">
+                <?php the_custom_logo(); ?>
+            </div>
+            <div class="nav">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#bio">Bio</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
         </div>

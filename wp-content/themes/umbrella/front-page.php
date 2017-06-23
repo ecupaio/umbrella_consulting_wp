@@ -1,8 +1,18 @@
 <?php get_header(); ?>
     <div id="main">
-
+        <!-- About -->
+        <?php get_page(6);?>
+        <div class="section" id="about" style="background-image: url(<?php the_field('about_image');?>)">
+            <div class="section-content">
+                <div class="section-text">
+                    <?php the_custom_logo(); ?>
+                    <?php the_field('about');?>
+                    <div class="pure-button">What we do</div>
+                </div>
+            </div>
+        </div>
+        <!-- Services -->
         <div class="section" id="services">
-
             <div id="services-slides">
                 <?php
                     $query = new WP_Query( array( 'post_type' => 'services') );
@@ -34,7 +44,15 @@
             </div>
         </div>
     </div>
-<!-- end wrapper  -->
-</div>
+    <!-- Bio -->
+    <?php get_page(6);?>
+    <div class="section" id="bio" style="background-image: url(<?php the_field('bio_image');?>);">
+        <div class="section-content">
+            <div class="section-text">
+                <?php the_field('bio');?>
+            </div>
+        </div>
+    </div>
+</div><!-- end wrapper  -->
 
 <?php get_footer(); ?>

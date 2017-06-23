@@ -18,9 +18,9 @@ body {
 #header {
 	@include header_colors;
 	text-align: center;
-	@include box-shadow;
 	h1, h2, h3, h4, h5 {
 		@include header_colors;
+		text-transform: uppercase;
 	}
 }
 //PureCSS Grids

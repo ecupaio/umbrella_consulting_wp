@@ -4,29 +4,20 @@ Author: Ed Cupaioli
 Description: Under my umbrella ella ella ey
 */
 @font-face {
-  font-family: "Gotham-Bold";
-  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.eot");
-  src: url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.otf") format("otf"), url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.svg") format("svg"), url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.ttf") format("ttf"), url("https://frontend-assets.dnc.org/fonts/Gotham-Bold.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: "GothamBook";
-  src: url("https://frontend-assets.dnc.org/fonts/GothamBook.eot");
-  src: url("https://frontend-assets.dnc.org/fonts/GothamRounded-Book.otf") format("otf"), url("https://frontend-assets.dnc.org/fonts/GothamBook.ttf") format("ttf"), url("https://frontend-assets.dnc.org/fonts/GothamBook.svg") format("svg"), url("https://frontend-assets.dnc.org/fonts/GothamBook.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: 'Archerus Grotesque';
+  src: url("css/fonts/acherus_grotesque.otf");
+  font-weight: normal; }
 
 .pure-button {
   border-radius: 0;
-  background-color: #FB9324;
+  background-color: transparent;
   color: #fff;
   white-space: normal;
-  font-family: "Gotham-Bold", sans-serif; }
+  font-family: "Lato", sans-serif; }
   .pure-button:hover, .pure-button:focus {
     background-image: none;
-    background-color: #fff;
-    color: #FB9324;
+    background-color: transparent;
+    color: #fff;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -62,6 +53,162 @@ Either pass the px number through individually, or set it as a variable */
 #footer {
   padding: 1em; }
 
+body.customize-support #header {
+  margin-top: 20px; }
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 4em;
+  z-index: 100; }
+  #header a {
+    color: #fff; }
+  #header .logo {
+    float: left;
+    height: 2em; }
+    #header .logo img {
+      height: 100%;
+      width: auto; }
+  #header .nav {
+    float: right;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0.75em;
+    font-size: 0.75em; }
+    #header .nav a.nav-link {
+      font-weight: 400;
+      margin: 0 0.5em; }
+  #header.active {
+    background: rgba(2, 65, 109, 0.7); }
+
+.section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: auto; }
+  .section h1 {
+    text-transform: uppercase;
+    margin-top: 0; }
+  .section h2 {
+    text-transform: uppercase;
+    margin-top: 0; }
+  .section h3 {
+    text-transform: uppercase;
+    margin-top: 0; }
+  .section h4 {
+    text-transform: uppercase;
+    margin-top: 0; }
+  .section h5 {
+    text-transform: uppercase;
+    margin-top: 0; }
+  .section h6 {
+    text-transform: uppercase;
+    margin-top: 0; }
+
+#about,
+#bio {
+  color: #fff; }
+  #about h1,
+  #bio h1 {
+    color: #fff; }
+  #about h2,
+  #bio h2 {
+    color: #fff; }
+  #about h3,
+  #bio h3 {
+    color: #fff; }
+  #about h4,
+  #bio h4 {
+    color: #fff; }
+  #about h5,
+  #bio h5 {
+    color: #fff; }
+  #about h6,
+  #bio h6 {
+    color: #fff; }
+
+.pure-button {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  box-shadow: inset 0 0 0 2px #fff;
+  color: #fff;
+  position: relative;
+  vertical-align: middle;
+  transition: color 0.25s; }
+  .pure-button::after, .pure-button::before {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  .pure-button::after, .pure-button::before {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+  .pure-button::after, .pure-button::before {
+    top: 0;
+    left: 0; }
+  .pure-button:hover {
+    color: #41CBEB; }
+  .pure-button:hover::after, .pure-button:hover::before {
+    width: 100%;
+    height: 100%; }
+  .pure-button:hover::before {
+    border-top-color: #41CBEB;
+    border-right-color: #41CBEB;
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+  .pure-button:hover::after {
+    border-bottom-color: #41CBEB;
+    border-left-color: #41CBEB;
+    transition: height 0.25s ease-out, width 0.25s ease-out 0.25s; }
+
+#about .section-content {
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em 3em;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #about .section-content .section-text {
+    text-align: center; }
+
+#bio {
+  position: relative;
+  background-size: cover;
+  background-position: right top;
+  background-attachment: local;
+  padding: 0;
+  background-color: #02416D;
+  color: #fff; }
+  #bio .section-content {
+    background: linear-gradient(to right, rgba(2, 65, 109, 0.8) 50%, transparent);
+    width: 100%;
+    z-index: 10;
+    overflow: auto; }
+    #bio .section-content .section-text {
+      padding: 1em 2em;
+      width: 50%; }
+  @media only screen and (max-width: 768px) {
+    #bio {
+      background-size: auto 100%; }
+      #bio .section-content {
+        background: rgba(2, 65, 109, 0.5); }
+        #bio .section-content .section-text {
+          width: 100%;
+          margin-top: 10em; } }
+  @media only screen and (max-width: 568px) {
+    #bio {
+      background-position: 90% top; }
+      #bio .section-content .section-text {
+        margin-top: 15em; } }
+
 #services #services-slides {
   overflow: hidden; }
   #services #services-slides .slide {
@@ -90,7 +237,7 @@ Either pass the px number through individually, or set it as a variable */
       min-height: 50vh; }
       #services #services-slides .slide .slide-inner .slide-content .slide-title {
         text-transform: uppercase;
-        font-family: "Gotham-Bold", sans-serif;
+        font-family: "Lato", sans-serif;
         font-size: 2em; }
   #services #services-slides .slick-next {
     right: 0.5rem; }
@@ -98,64 +245,66 @@ Either pass the px number through individually, or set it as a variable */
     left: 0.5rem;
     z-index: 10; }
 
-#services #services-controls {
-  overflow: hidden; }
-  #services #services-controls .slide-control {
-    background: #fff;
-    height: 10em;
-    text-align: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: #ccc;
-    color: #ccc;
-    outline: none;
-    padding: 1em;
-    transition: all 0.7s ease;
-    -webkit-transition: all 0.7s ease;
-    -moz-transition: all 0.7s ease;
-    -o-transition: all 0.7s ease;
-    position: relative; }
-    #services #services-controls .slide-control .slide-highlight {
-      height: 3px;
-      position: absolute;
-      bottom: 0;
+#services #services-controls .slide-control {
+  background: #fff;
+  height: 10em;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  outline: none;
+  padding: 1em;
+  position: relative;
+  vertical-align: middle;
+  transition: color 0.25s;
+  -webkit-transition: color 0.25s; }
+  #services #services-controls .slide-control:hover {
+    cursor: pointer; }
+  #services #services-controls .slide-control::after, #services #services-controls .slide-control::before {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0; }
+  #services #services-controls .slide-control::before {
+    top: 0;
+    left: 0; }
+  #services #services-controls .slide-control::after {
+    bottom: 0;
+    right: 0; }
+  #services #services-controls .slide-control.slick-current {
+    color: #41CBEB; }
+    #services #services-controls .slide-control.slick-current::after, #services #services-controls .slide-control.slick-current::before {
       width: 100%;
-      background-color: #41CBEB;
-      transform: scaleX(0);
-      -webkit-transform: scaleX(0);
-      transform-origin: center;
-      -webkit-transform-origin: center;
-      transition: transform 0.5s ease;
-      -webkit-transition: transform 0.5s ease;
-      -moz-transition: transform 0.5s ease;
-      -o-transition: transform 0.5s ease; }
-    #services #services-controls .slide-control.slick-current {
-      color: #41CBEB; }
-      #services #services-controls .slide-control.slick-current .slide-highlight {
-        transform: scaleX(1);
-        -webkit-transform: scaleX(1); }
-    @media only screen and (max-width: 1024px) {
-      #services #services-controls .slide-control {
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%); } }
+      height: 100%; }
+    #services #services-controls .slide-control.slick-current::before {
+      border-top-color: #41CBEB;
+      border-right-color: #41CBEB;
+      transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+    #services #services-controls .slide-control.slick-current::after {
+      border-bottom-color: #41CBEB;
+      border-left-color: #41CBEB;
+      transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+  @media only screen and (max-width: 1024px) {
+    #services #services-controls .slide-control {
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%); } }
 
 .pure-button {
   border-radius: 0;
-  background-color: #FB9324;
+  background-color: transparent;
   color: #fff;
   white-space: normal;
-  font-family: "Gotham-Bold", sans-serif; }
+  font-family: "Lato", sans-serif; }
   .pure-button:hover, .pure-button:focus {
     background-image: none;
-    background-color: #fff;
-    color: #FB9324;
+    background-color: transparent;
+    color: #fff;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -165,14 +314,14 @@ Either pass the px number through individually, or set it as a variable */
 Either pass the px number through individually, or set it as a variable */
 .pure-button {
   border-radius: 0;
-  background-color: #FB9324;
+  background-color: transparent;
   color: #fff;
   white-space: normal;
-  font-family: "Gotham-Bold", sans-serif; }
+  font-family: "Lato", sans-serif; }
   .pure-button:hover, .pure-button:focus {
     background-image: none;
-    background-color: #fff;
-    color: #FB9324;
+    background-color: transparent;
+    color: #fff;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -199,13 +348,11 @@ body {
 #header {
   background-color: #02416D;
   color: #fff;
-  text-align: center;
-  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
-  -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
-  box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5); }
+  text-align: center; }
   #header h1, #header h2, #header h3, #header h4, #header h5 {
     background-color: #02416D;
-    color: #fff; }
+    color: #fff;
+    text-transform: uppercase; }
 
 /* fix for IE and Firefox responsiveness */
 .pure-g {
@@ -217,10 +364,10 @@ body {
   flex-flow: row wrap; }
 
 .pure-g [class*="pure-u"] {
-  font-family: "GothamBook", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .pure-g {
-  font-family: "GothamBook", sans-serif; }
+  font-family: "Open Sans", sans-serif; }
 
 .signup-form {
   background: #F6F6F6;
@@ -281,16 +428,16 @@ body {
         margin: 0; }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Gotham-Bold", sans-serif;
+  font-family: "Lato", sans-serif;
   color: #0F2446; }
 
 body {
-  font-family: "GothamBook", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 14pt;
   color: #0F2446; }
 
 b, strong {
-  font-family: "Gotham-Bold", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: bold; }
 
 a {

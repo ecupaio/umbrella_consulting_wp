@@ -72,3 +72,15 @@ function wptuts_scripts_basic()
     wp_enqueue_script( 'custom-script' );
 }
 add_action( 'wp_enqueue_scripts', 'wptuts_scripts_basic' );
+/* Register Menus*/
+function register_my_menus() {
+register_nav_menus(
+array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' ))
+);
+}
+add_action( 'init', 'register_my_menus' );
+add_theme_support( 'custom-logo', array(	
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+) );
