@@ -4,28 +4,35 @@ $alt_color: #FB9324;
 $text_color: #333;
 $link_color: #41CBEB;
 $white: #fff;
-$gray: #ccc; //Body and Heading text Colors
+$gray: #ccc;
+//Body and Heading text Colors
 $theme_body: $brand_dk_blue;
 $theme_body_link: $brand_lt_blue;
 $theme_body_link_hover: $brand_dk_blue;
-$theme_heading: $brand_dk_blue; //Footer Colors
+$theme_heading: $brand_dk_blue;
+//Footer Colors
 $theme_footer_bg: $brand_dk_blue;
 $theme_footer_txt: $brand_white;
 $copyright_link: $brand_lt_blue;
-$copyright_link_hover: $brand_white; //Header Colors
+$copyright_link_hover: $brand_white;
+//Header Colors
 $theme_header_bg: $primary_color;
-$theme_header_txt: $white; //Button Colors
+$theme_header_txt: $white;
+//Button Colors
 $theme_button_bg: transparent;
 $theme_button_txt: $white;
 $hover_button_bg: transparent;
-$hover_button_txt: $white; //BSD Form Colors
+$hover_button_txt: $link_color;
+//BSD Form Colors
 $theme_form_bg: $brand_gray;
 $theme_form_txt: $brand_black;
 $theme_form_btn_bg: $brand_dk_blue;
-$theme_form_btn_txt: $brand_white; //Mobile Breakpoints
+$theme_form_btn_txt: $brand_white;
+//Mobile Breakpoints
 $size-large: 1024px;
 $size-medium: 768px;
-$size-small: 568px; //Padding for Sections and Grids
+$size-small: 568px;
+//Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
 $body-padding: 0;
@@ -215,6 +222,7 @@ body.customize-support {
 }
 
 #services {
+    @include box_shadow_bottom;
     #services-slides {
         overflow: hidden;
 
@@ -290,47 +298,45 @@ body.customize-support {
             vertical-align: middle;
             transition: color 0.25s;
             -webkit-transition: color 0.25s;
+            &::after,
+            &::before {
+                box-sizing: inherit;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
 
             &::after,
             &::before {
-                // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
                 border: 2px solid transparent;
                 width: 0;
                 height: 0;
             }
-            // This covers the top & right borders (expands right, then down)
+            &::after,
             &::before {
                 top: 0;
                 left: 0;
             }
-            // And this the bottom & left borders (expands left, then up)
-            &::after {
-                bottom: 0;
-                right: 0;
-            }
 
             &.slick-current {
                 color: $link_color;
-                // Hover styles
                 &::after,
                 &::before {
                     width: 100%;
                     height: 100%;
                 }
-
                 &::before {
-                    border-top-color: $link_color; // Make borders visible
+                    border-top-color: $link_color;
                     border-right-color: $link_color;
-                    transition:width 0.25s ease-out,// Width expands first
-                    height 0.25s ease-out 0.25s; // And then height
+                    transition:width 0.25s ease-out,
+                    height 0.25s ease-out 0.25s;
                 }
-
                 &::after {
-                    border-bottom-color: $link_color; // Make borders visible
+                    border-bottom-color: $link_color;
                     border-left-color: $link_color;
-                    transition:border-color 0s ease-out 0.5s,// Wait for ::before to finish before showing border
-                    width 0.25s ease-out 0.5s,// And then exanding width
-                    height 0.25s ease-out 0.75s; // And finally height
+                    transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
                 }
             }
             @include bp-medium($size-large) {

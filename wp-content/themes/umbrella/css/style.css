@@ -17,7 +17,7 @@ Description: Under my umbrella ella ella ey
   .pure-button:hover, .pure-button:focus {
     background-image: none;
     background-color: transparent;
-    color: #fff;
+    color: #41CBEB;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -209,91 +209,97 @@ body.customize-support #header {
       #bio .section-content .section-text {
         margin-top: 15em; } }
 
-#services #services-slides {
-  overflow: hidden; }
-  #services #services-slides .slide {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: #fff; }
-    #services #services-slides .slide:nth-child(odd) {
-      background-color: #02416D; }
-      #services #services-slides .slide:nth-child(odd) .slide-inner {
-        background-color: rgba(2, 65, 109, 0.8); }
-    #services #services-slides .slide:nth-child(even) {
-      background-color: #FB9324; }
-      #services #services-slides .slide:nth-child(even) .slide-inner {
-        background-color: rgba(251, 147, 36, 0.8); }
-    #services #services-slides .slide .slide-inner {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1em 3em;
-      min-height: 50vh; }
-      #services #services-slides .slide .slide-inner .slide-content .slide-title {
-        text-transform: uppercase;
-        font-family: "Lato", sans-serif;
-        font-size: 2em; }
-  #services #services-slides .slick-next {
-    right: 0.5rem; }
-  #services #services-slides .slick-prev {
-    left: 0.5rem;
-    z-index: 10; }
-
-#services #services-controls .slide-control {
-  background: #fff;
-  height: 10em;
-  text-align: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ccc;
-  font-family: "Lato", sans-serif;
-  text-transform: uppercase;
-  outline: none;
-  padding: 1em;
-  position: relative;
-  vertical-align: middle;
-  transition: color 0.25s;
-  -webkit-transition: color 0.25s; }
-  #services #services-controls .slide-control:hover {
-    cursor: pointer; }
-  #services #services-controls .slide-control::after, #services #services-controls .slide-control::before {
-    border: 2px solid transparent;
-    width: 0;
-    height: 0; }
-  #services #services-controls .slide-control::before {
-    top: 0;
-    left: 0; }
-  #services #services-controls .slide-control::after {
-    bottom: 0;
-    right: 0; }
-  #services #services-controls .slide-control.slick-current {
-    color: #41CBEB; }
-    #services #services-controls .slide-control.slick-current::after, #services #services-controls .slide-control.slick-current::before {
+#services {
+  -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+  -moz-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+  box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5); }
+  #services #services-slides {
+    overflow: hidden; }
+    #services #services-slides .slide {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #fff; }
+      #services #services-slides .slide:nth-child(odd) {
+        background-color: #02416D; }
+        #services #services-slides .slide:nth-child(odd) .slide-inner {
+          background-color: rgba(2, 65, 109, 0.8); }
+      #services #services-slides .slide:nth-child(even) {
+        background-color: #FB9324; }
+        #services #services-slides .slide:nth-child(even) .slide-inner {
+          background-color: rgba(251, 147, 36, 0.8); }
+      #services #services-slides .slide .slide-inner {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1em 3em;
+        min-height: 50vh; }
+        #services #services-slides .slide .slide-inner .slide-content .slide-title {
+          text-transform: uppercase;
+          font-family: "Lato", sans-serif;
+          font-size: 2em; }
+    #services #services-slides .slick-next {
+      right: 0.5rem; }
+    #services #services-slides .slick-prev {
+      left: 0.5rem;
+      z-index: 10; }
+  #services #services-controls .slide-control {
+    background: #fff;
+    height: 10em;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    outline: none;
+    padding: 1em;
+    position: relative;
+    vertical-align: middle;
+    transition: color 0.25s;
+    -webkit-transition: color 0.25s; }
+    #services #services-controls .slide-control:hover {
+      cursor: pointer; }
+    #services #services-controls .slide-control::after, #services #services-controls .slide-control::before {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
       width: 100%;
       height: 100%; }
-    #services #services-controls .slide-control.slick-current::before {
-      border-top-color: #41CBEB;
-      border-right-color: #41CBEB;
-      transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
-    #services #services-controls .slide-control.slick-current::after {
-      border-bottom-color: #41CBEB;
-      border-left-color: #41CBEB;
-      transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
-  @media only screen and (max-width: 1024px) {
-    #services #services-controls .slide-control {
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%); } }
+    #services #services-controls .slide-control::after, #services #services-controls .slide-control::before {
+      border: 2px solid transparent;
+      width: 0;
+      height: 0; }
+    #services #services-controls .slide-control::after, #services #services-controls .slide-control::before {
+      top: 0;
+      left: 0; }
+    #services #services-controls .slide-control.slick-current {
+      color: #41CBEB; }
+      #services #services-controls .slide-control.slick-current::after, #services #services-controls .slide-control.slick-current::before {
+        width: 100%;
+        height: 100%; }
+      #services #services-controls .slide-control.slick-current::before {
+        border-top-color: #41CBEB;
+        border-right-color: #41CBEB;
+        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+      #services #services-controls .slide-control.slick-current::after {
+        border-bottom-color: #41CBEB;
+        border-left-color: #41CBEB;
+        transition: height 0.25s ease-out, width 0.25s ease-out 0.25s; }
+    @media only screen and (max-width: 1024px) {
+      #services #services-controls .slide-control {
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%); } }
 
 .pure-button {
   border-radius: 0;
@@ -304,7 +310,7 @@ body.customize-support #header {
   .pure-button:hover, .pure-button:focus {
     background-image: none;
     background-color: transparent;
-    color: #fff;
+    color: #41CBEB;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
@@ -321,7 +327,7 @@ Either pass the px number through individually, or set it as a variable */
   .pure-button:hover, .pure-button:focus {
     background-image: none;
     background-color: transparent;
-    color: #fff;
+    color: #41CBEB;
     transition: all 0.7s ease;
     -webkit-transition: all 0.7s ease;
     -moz-transition: all 0.7s ease;
