@@ -63,7 +63,7 @@ $(document).ready(function(){
     $('.contact-form-bg').attr('style','background-image: url('+mapUri+')');
     //Social Media Menu
     var social;
-    var socialIcon;
+    
     $('.social-link').each(function(i,obj) {
         social = $(this).attr('href');
         if (social.indexOf('facebook') > -1) {
@@ -72,8 +72,6 @@ $(document).ready(function(){
             $(this).html('<i class="fa fa-twitter"></i>');
         } else if (social.indexOf('linkedin') > -1) {
             $(this).html('<i class="fa fa-linkedin"></i>');
-        } else {
-            $(this).html('<i class="fa fa-'+social+'"></i>');
         }
     });
 
