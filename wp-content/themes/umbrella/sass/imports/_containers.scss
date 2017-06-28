@@ -64,12 +64,10 @@ body {
 //Footer
 #footer {
 	@include footer_colors;
-	text-align: center;
+
 	clear: both;
 	font-size: 0.75em;
-	a, .copyright-text {
-        font-size: 0.75em;
-    }
+
 	a {
 	    color: $copyright_link;
 	    text-decoration: none;
@@ -78,16 +76,4 @@ body {
 	    }
   	}
 
-	.copyright-footer {
-		border: 1px solid $theme_footer_txt;
-		width: 75%;
-		margin: auto;
-		display: inline-block;
-		.copyright-text {
-			padding: 1em 2em;
-			p {
-				margin: 0;
-			}
-		}
-	}
 }

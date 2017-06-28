@@ -30,12 +30,14 @@ Either pass the px number through individually, or set it as a variable */
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   padding: 0.5em 1em; }
-  .pure-g > div[class*="pure-u-"] input:not([type=submit]):not([type=file]), .pure-g > div[class*="pure-u-"] textarea:not([type=submit]):not([type=file]) {
-    width: 100%;
-    padding: 0.5em;
-    -webkit-appearance: none; }
-  .pure-g > div[class*="pure-u-"] input.submit, .pure-g > div[class*="pure-u-"] textarea.submit {
-    white-space: normal; }
+  .pure-g > div[class*="pure-u-"] input, .pure-g > div[class*="pure-u-"] textarea {
+    outline: 0; }
+    .pure-g > div[class*="pure-u-"] input:not([type=submit]):not([type=file]), .pure-g > div[class*="pure-u-"] textarea:not([type=submit]):not([type=file]) {
+      width: 100%;
+      padding: 0.5em;
+      -webkit-appearance: none; }
+    .pure-g > div[class*="pure-u-"] input.submit, .pure-g > div[class*="pure-u-"] textarea.submit {
+      white-space: normal; }
 
 .pure-g > form > div[class*="pure-u-"] > div {
   padding: 0.5em 1em; }
@@ -333,6 +335,109 @@ body.customize-support #header {
         transform: translateX(0);
         -webkit-transform: translateX(0); } }
 
+#contact {
+  background: #fff;
+  color: #02416D;
+  text-align: center; }
+  #contact .contact-info {
+    padding: 1em 2em; }
+  #contact .pure-button {
+    color: #02416D;
+    background: transparent; }
+    #contact .pure-button i {
+      font-size: 1.5em; }
+    #contact .pure-button br {
+      line-height: 1.5em; }
+    #contact .pure-button:hover {
+      color: #41CBEB; }
+  #contact .contact-btns {
+    max-width: 1024px;
+    margin: auto; }
+    #contact .contact-btns .pure-button {
+      text-transform: none; }
+  #contact .contact-form-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2em; }
+    #contact .contact-form-bg .form-container {
+      max-width: 568px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      margin: auto;
+      padding: 1em;
+      position: relative;
+      overflow: hidden;
+      z-index: 1; }
+      #contact .contact-form-bg .form-container .form-field input, #contact .contact-form-bg .form-container .form-field textarea {
+        outline: 0; }
+        #contact .contact-form-bg .form-container .form-field input:not([type=submit]):not([type=file]), #contact .contact-form-bg .form-container .form-field textarea:not([type=submit]):not([type=file]) {
+          width: 100%;
+          padding: 0.5em;
+          -webkit-appearance: none; }
+        #contact .contact-form-bg .form-container .form-field input.submit, #contact .contact-form-bg .form-container .form-field textarea.submit {
+          white-space: normal; }
+      #contact .contact-form-bg .form-container .form-field input, #contact .contact-form-bg .form-container .form-field textarea {
+        border: 2px solid #02416D;
+        margin: 0.5em 0;
+        transition: all 0.7s ease;
+        -webkit-transition: all 0.7s ease;
+        -moz-transition: all 0.7s ease;
+        -o-transition: all 0.7s ease; }
+        #contact .contact-form-bg .form-container .form-field input:active, #contact .contact-form-bg .form-container .form-field input:focus, #contact .contact-form-bg .form-container .form-field textarea:active, #contact .contact-form-bg .form-container .form-field textarea:focus {
+          border: 2px solid #41CBEB; }
+      #contact .contact-form-bg .form-container .form-field .submit {
+        box-shadow: inset 0 0 0 2px #02416D; }
+      #contact .contact-form-bg .form-container .form-success {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(2, 65, 109, 0.8);
+        color: #fff;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        padding: 1em;
+        z-index: 2;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        #contact .contact-form-bg .form-container .form-success h1 {
+          color: #fff; }
+        #contact .contact-form-bg .form-container .form-success h2 {
+          color: #fff; }
+        #contact .contact-form-bg .form-container .form-success h3 {
+          color: #fff; }
+        #contact .contact-form-bg .form-container .form-success h4 {
+          color: #fff; }
+        #contact .contact-form-bg .form-container .form-success h5 {
+          color: #fff; }
+        #contact .contact-form-bg .form-container .form-success h6 {
+          color: #fff; }
+        #contact .contact-form-bg .form-container .form-success.active {
+          transform: translateX(0%);
+          -webkit-transform: translateX(0%); }
+    #contact .contact-form-bg .form-redirect {
+      display: none; }
+
+#footer {
+  overflow: hidden; }
+  #footer .footer-menu {
+    float: left; }
+    #footer .footer-menu .social-link {
+      font-size: 1rem;
+      margin-right: 0.5em; }
+  #footer .footer-copyright {
+    float: right; }
+
 .pure-button {
   border-radius: 0;
   background-color: transparent;
@@ -423,12 +528,14 @@ body {
 
 .signup-form {
   padding: 1em; }
-  .signup-form input:not([type=submit]):not([type=file]), .signup-form textarea:not([type=submit]):not([type=file]) {
-    width: 100%;
-    padding: 0.5em;
-    -webkit-appearance: none; }
-  .signup-form input.submit, .signup-form textarea.submit {
-    white-space: normal; }
+  .signup-form input, .signup-form textarea {
+    outline: 0; }
+    .signup-form input:not([type=submit]):not([type=file]), .signup-form textarea:not([type=submit]):not([type=file]) {
+      width: 100%;
+      padding: 0.5em;
+      -webkit-appearance: none; }
+    .signup-form input.submit, .signup-form textarea.submit {
+      white-space: normal; }
   .signup-form .pure-button {
     text-transform: uppercase;
     font-weight: bold;
@@ -445,25 +552,13 @@ body {
 #footer {
   background: #02416D;
   color: #fff;
-  text-align: center;
   clear: both;
   font-size: 0.75em; }
-  #footer a, #footer .copyright-text {
-    font-size: 0.75em; }
   #footer a {
-    color: #41CBEB;
+    color: #fff;
     text-decoration: none; }
     #footer a:hover {
-      color: #fff; }
-  #footer .copyright-footer {
-    border: 1px solid #fff;
-    width: 75%;
-    margin: auto;
-    display: inline-block; }
-    #footer .copyright-footer .copyright-text {
-      padding: 1em 2em; }
-      #footer .copyright-footer .copyright-text p {
-        margin: 0; }
+      color: #41CBEB; }
 
 h1, h2, h3, h4, h5 {
   font-family: "Lato", sans-serif;

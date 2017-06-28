@@ -108,6 +108,7 @@
 //Form Input
 @mixin input {
 	input,textarea {
+		outline: 0;
 		&:not([type=submit]):not([type=file]) {
 			width: 100%;
 			padding: 0.5em;

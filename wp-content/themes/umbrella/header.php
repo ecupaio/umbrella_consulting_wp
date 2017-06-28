@@ -46,8 +46,8 @@
     <div id="wrapper">
         <div id="header">
             <div class="logo">
-                <?php the_custom_logo(); ?>
-                <?php get_site_icon_url(); ?>
+                <?php get_page(6);?>
+                <a href="<?php get_home_url();?>"><img src="<?php the_field('navbar_logo');?>"></a>
             </div>
             <div class="nav">
                 <a class="nav-link" href="#about">Home</a>

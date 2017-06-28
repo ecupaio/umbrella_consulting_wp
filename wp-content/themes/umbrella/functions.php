@@ -66,7 +66,7 @@ function wptuts_scripts_basic()
 {
 
     // Register the script like this for a theme:
-    wp_register_script( 'custom-script', get_template_directory_uri() . '/js/theme_functions.min.js', '','',true );
+    wp_register_script( 'custom-script', get_template_directory_uri() . '/js/theme_functions.min.js', '','',false );
 
     // For either a plugin or a theme, you can then enqueue the script:
     wp_enqueue_script( 'custom-script' );
@@ -79,8 +79,29 @@ array( 'header-menu' => __( 'Header Menu' ), 'footer-menu' => __( 'Footer Menu' 
 );
 }
 add_action( 'init', 'register_my_menus' );
-add_theme_support( 'custom-logo', array(	
+add_theme_support( 'custom-logo', array(
 	'flex-height' => true,
 	'flex-width'  => true,
 	'header-text' => array( 'site-title', 'site-description' ),
 ) );
+function clean_custom_menus() {
+	$menu_name = 'footer-menu'; // specify custom menu slug
+	if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {
+	   $menu = wp_get_nav_menu_object($locations[$menu_name]);
+	   $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+	   $menu_list = '<div class="social-links">' ."\n";
+
+	   foreach ((array) $menu_items as $key => $menu_item) {
+		   $title = $menu_item->title;
+		   $social = strtolower($title);
+		   $url = $menu_item->url;
+		   $menu_list .= "\t\t\t\t". '<a class="social-link" target="_blank" href="'. $url .'" data-social="'.$social.'"></a>' ."\n";
+	   }
+
+	   $menu_list .= "\t\t\t". '</div>' ."\n";
+	} else {
+	   // $menu_list = '<!-- no list defined -->';
+	}
+	echo $menu_list;
+}

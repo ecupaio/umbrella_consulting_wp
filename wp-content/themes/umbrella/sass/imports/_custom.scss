@@ -13,8 +13,8 @@ $theme_heading: $brand_dk_blue;
 //Footer Colors
 $theme_footer_bg: $primary_color;
 $theme_footer_txt: $brand_white;
-$copyright_link: $link_color;
-$copyright_link_hover: $white;
+$copyright_link: $white;
+$copyright_link_hover: $link_color;
 //Header Colors
 $theme_header_bg: rgba($primary_color,1);
 $theme_header_txt: $white;
@@ -380,5 +380,104 @@ body.customize-support {
                 -webkit-transform: translateX(0);
             }
         }
+    }
+}
+#contact {
+    background: $white;
+    color: $primary_color;
+    text-align: center;
+    .contact-info {
+        padding: 1em 2em;
+    }
+    .pure-button {
+        color: $primary_color;
+        background: transparent;
+        i {
+            font-size: 1.5em;
+        }
+
+        br {
+            line-height: 1.5em;
+        }
+        &:hover {
+            color: $link_color;
+        }
+    }
+    .contact-btns {
+        max-width: $size-large;
+        margin: auto;
+        .pure-button {
+            text-transform: none;
+        }
+    }
+    .contact-form-bg {
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2em;
+        .form-container {
+            max-width: $size-small;
+            width: 100%;
+            background: rgba($brand_white,0.9);
+            margin: auto;
+            padding: 1em;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            .form-field {
+                @include input;
+                input,textarea  {
+                    border: 2px solid $primary_color;
+                    margin: 0.5em 0;
+                    @include transition;
+                    &:active,&:focus  {
+                        border: 2px solid $link_color;
+                    }
+                }
+                .submit {
+                    box-shadow: inset 0 0 0 2px $primary_color;
+                }
+            }
+            .form-success {
+                position: absolute;
+                left: 0;
+                top:0;
+                height: 100%;
+                width: 100%;
+                background: rgba($primary_color,0.8);
+                color: $white;
+                transform: translateX(-100%);
+                -webkit-transform: translateX(-100%);
+                @include headings(){
+                    color: $white;
+                };
+                padding: 1em;
+                z-index: 2;
+                @include custom_transition(all 0.5s ease);
+                @include flexbox;
+                justify-content: center;
+                align-items: center;
+                &.active {
+                    transform: translateX(0%);
+                    -webkit-transform: translateX(0%);
+                }
+            }
+
+        }
+        .form-redirect {
+            display: none;
+        }
+    }
+}
+#footer {
+    overflow: hidden;
+    .footer-menu {
+        float: left;
+        .social-link {
+            font-size: 1rem;
+            margin-right: 0.5em;
+        }
+    }
+    .footer-copyright {
+        float: right;
     }
 }
