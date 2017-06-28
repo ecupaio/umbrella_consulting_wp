@@ -5,7 +5,7 @@
 
  </div>
  <div class="footer-copyright">
-     Made with <i class="fa fa-heart"></i> by <a href="https://edcupaioli.com">Ed Cupaioli <i class="fa fa-copyright"></i></a>
+     Made with <i class="fa fa-heart"></i> by <a href="http://edcupaioli.com">Ed Cupaioli <i class="fa fa-copyright"></i></a>
  </div>
 </div>
 <?php wp_footer(); ?>
