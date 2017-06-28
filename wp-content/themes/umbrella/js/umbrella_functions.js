@@ -65,12 +65,12 @@ $(document).ready(function(){
     var social;
     var socialIcon;
     $('.social-link').each(function(i,obj) {
-        social = $(this).data('social');
-        if (social === "facebook") {
+        social = $(this).attr('href');
+        if (social.indexOf('facebook') > -1) {
             $(this).html('<i class="fa fa-facebook"></i>');
-        } else if (social === "twitter") {
+        } else if (social.indexOf('twitter') > -1) {
             $(this).html('<i class="fa fa-twitter"></i>');
-        } else if (social === "linkedin") {
+        } else if (social.indexOf('linkedin') > -1) {
             $(this).html('<i class="fa fa-linkedin"></i>');
         } else {
             $(this).html('<i class="fa fa-'+social+'"></i>');

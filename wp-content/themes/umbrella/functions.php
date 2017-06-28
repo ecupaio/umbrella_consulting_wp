@@ -94,9 +94,8 @@ function clean_custom_menus() {
 
 	   foreach ((array) $menu_items as $key => $menu_item) {
 		   $title = $menu_item->title;
-		   $social = strtolower($title);
 		   $url = $menu_item->url;
-		   $menu_list .= "\t\t\t\t". '<a class="social-link" target="_blank" href="'. $url .'" data-social="'.$social.'"></a>' ."\n";
+		   $menu_list .= "\t\t\t\t". '<a class="social-link" target="_blank" href="'. $url .'"></a>' ."\n";
 	   }
 
 	   $menu_list .= "\t\t\t". '</div>' ."\n";
