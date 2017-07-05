@@ -4,35 +4,28 @@ $alt_color: #FB9324;
 $text_color: #333;
 $link_color: #41CBEB;
 $white: #fff;
-$gray: #ccc;
-//Body and Heading text Colors
+$gray: #ccc; //Body and Heading text Colors
 $theme_body: $brand_dk_blue;
 $theme_body_link: $brand_lt_blue;
 $theme_body_link_hover: $brand_dk_blue;
-$theme_heading: $brand_dk_blue;
-//Footer Colors
+$theme_heading: $brand_dk_blue; //Footer Colors
 $theme_footer_bg: $primary_color;
 $theme_footer_txt: $brand_white;
 $copyright_link: $white;
-$copyright_link_hover: $link_color;
-//Header Colors
+$copyright_link_hover: $link_color; //Header Colors
 $theme_header_bg: rgba($primary_color,1);
-$theme_header_txt: $white;
-//Button Colors
+$theme_header_txt: $white; //Button Colors
 $theme_button_bg: transparent;
 $theme_button_txt: $white;
 $hover_button_bg: transparent;
-$hover_button_txt: $link_color;
-//BSD Form Colors
+$hover_button_txt: $link_color; //BSD Form Colors
 $theme_form_bg: $brand_gray;
 $theme_form_txt: $brand_black;
 $theme_form_btn_bg: $brand_dk_blue;
-$theme_form_btn_txt: $brand_white;
-//Mobile Breakpoints
+$theme_form_btn_txt: $brand_white; //Mobile Breakpoints
 $size-large: 1024px;
 $size-medium: 768px;
-$size-small: 568px;
-//Padding for Sections and Grids
+$size-small: 568px; //Padding for Sections and Grids
 $gutter-padding: 0.5em 1em;
 $header-padding: 1em;
 $body-padding: 0;
@@ -58,8 +51,8 @@ body.customize-support {
     width: 100%;
     min-height: 4em;
     z-index: 100;
-
     @include custom_transition(background-color 0.5s ease);
+
     a {
         color: $white;
     }
@@ -85,6 +78,7 @@ body.customize-support {
             font-weight: 400;
             margin: 0 0.5em;
             position: relative;
+
             &:before {
                 content: "";
                 position: absolute;
@@ -100,18 +94,19 @@ body.customize-support {
                 transition: all 0.3s ease;
             }
 
-            &:hover, &.active {
+            &.active,
+            &:hover {
                 &:before {
                     visibility: visible;
                     -webkit-transform: scaleX(1);
                     transform: scaleX(1);
                 }
             }
-
         }
     }
     @include bp-small($size-small) {
-        .logo,.nav {
+        .logo,
+        .nav {
             float: none;
             width: 100%;
             text-align: center;
@@ -151,6 +146,7 @@ body.customize-support {
     position: relative;
     vertical-align: middle;
     font-weight: 400;
+
     &::after,
     &::before {
         box-sizing: inherit;
@@ -167,6 +163,7 @@ body.customize-support {
         width: 0;
         height: 0;
     }
+
     &::after,
     &::before {
         top: 0;
@@ -186,8 +183,7 @@ body.customize-support {
     &:hover::before {
         border-top-color: $link_color;
         border-right-color: $link_color;
-        transition:width 0.25s ease-out,
-        height 0.25s ease-out 0.25s;
+        transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
     }
 
     &:hover::after {
@@ -255,6 +251,7 @@ body.customize-support {
 
 #services {
     @include box_shadow_bottom;
+
     #services-slides {
         overflow: hidden;
 
@@ -312,7 +309,7 @@ body.customize-support {
         //overflow: hidden;
         .slide-control {
             background: $white;
-            height: 10em;
+            min-height: 5em;
             text-align: center;
             @include flexbox;
             align-items: center;
@@ -330,6 +327,7 @@ body.customize-support {
             vertical-align: middle;
             transition: color 0.25s;
             -webkit-transition: color 0.25s;
+
             &::after,
             &::before {
                 box-sizing: inherit;
@@ -339,13 +337,13 @@ body.customize-support {
                 height: 100%;
             }
 
-
             &::after,
             &::before {
                 border: 2px solid transparent;
                 width: 0;
                 height: 0;
             }
+
             &::after,
             &::before {
                 top: 0;
@@ -354,17 +352,19 @@ body.customize-support {
 
             &.slick-current {
                 color: $link_color;
+
                 &::after,
                 &::before {
                     width: 100%;
                     height: 100%;
                 }
+
                 &::before {
                     border-top-color: $link_color;
                     border-right-color: $link_color;
-                    transition:width 0.25s ease-out,
-                    height 0.25s ease-out 0.25s;
+                    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
                 }
+
                 &::after {
                     border-bottom-color: $link_color;
                     border-left-color: $link_color;
@@ -382,16 +382,20 @@ body.customize-support {
         }
     }
 }
+
 #contact {
     background: $white;
     color: $primary_color;
     text-align: center;
+
     .contact-info {
         padding: 1em 2em;
     }
+
     .pure-button {
         color: $primary_color;
         background: transparent;
+
         i {
             font-size: 1.5em;
         }
@@ -399,21 +403,26 @@ body.customize-support {
         br {
             line-height: 1.5em;
         }
+
         &:hover {
             color: $link_color;
         }
     }
+
     .contact-btns {
         max-width: $size-large;
         margin: auto;
+
         .pure-button {
             text-transform: none;
         }
     }
+
     .contact-form-bg {
         background-repeat: no-repeat;
         background-size: cover;
         padding: 2em;
+
         .form-container {
             max-width: $size-small;
             width: 100%;
@@ -423,31 +432,38 @@ body.customize-support {
             position: relative;
             overflow: hidden;
             z-index: 1;
+
             .form-field {
                 @include input;
-                input,textarea  {
+
+                input,
+                textarea {
                     border: 2px solid $primary_color;
                     margin: 0.5em 0;
                     @include transition;
-                    &:active,&:focus  {
+
+                    &:active,
+                    &:focus {
                         border: 2px solid $link_color;
                     }
                 }
+
                 .submit {
                     box-shadow: inset 0 0 0 2px $primary_color;
                 }
             }
+
             .form-success {
                 position: absolute;
                 left: 0;
-                top:0;
+                top: 0;
                 height: 100%;
                 width: 100%;
                 background: rgba($primary_color,0.8);
                 color: $white;
                 transform: translateX(-100%);
                 -webkit-transform: translateX(-100%);
-                @include headings(){
+                @include headings() {
                     color: $white;
                 };
                 padding: 1em;
@@ -456,27 +472,62 @@ body.customize-support {
                 @include flexbox;
                 justify-content: center;
                 align-items: center;
+
                 &.active {
                     transform: translateX(0%);
                     -webkit-transform: translateX(0%);
                 }
             }
-
         }
+
         .form-redirect {
             display: none;
         }
     }
 }
+
+#clients {
+    text-align: center;
+    padding: 1em;
+    .client-grid {
+        justify-content: center;
+        align-items: center;
+        & > div {
+            padding: 1em;
+        }
+    }
+    .client-tile {
+        .client-logo {
+            img {
+                height: 5em;
+                width: auto;
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+                @include transition;
+            }
+            &:hover {
+                img {
+                    -webkit-filter: grayscale(0%);
+                    filter: grayscale(0%);
+                }
+            }
+        }
+
+    }
+}
+
 #footer {
     overflow: hidden;
+
     .footer-menu {
         float: left;
+
         .social-link {
             font-size: 1rem;
             margin-right: 0.5em;
         }
     }
+
     .footer-copyright {
         float: right;
     }

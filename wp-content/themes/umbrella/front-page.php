@@ -44,6 +44,23 @@
             </div>
         </div>
     </div>
+    <!-- Clients -->
+    <div class="section" id="clients">
+        <h1>Clients</h1>
+        <div class="client-grid pure-g">
+        <?php
+            $query = new WP_Query( array( 'post_type' => 'clients') );
+            if ( $query->have_posts() ) : ?>
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+            <div class="client-tile pure-u-1 pure-u-md-1-2 pure-u-lg-1-3" >
+                <a class="client-logo" href="<?php the_field('client_url'); ?>" target="_blank">
+                    <img src="<?php the_field('client_logo'); ?>">
+                </a>
+            </div>
+            <?php endwhile; wp_reset_postdata(); ?>
+            <?php endif; ?>
+        </div>
+    </div>
     <!-- Bio -->
     <?php get_page(6);?>
     <div class="section" id="bio" style="background-image: url(<?php the_field('bio_image');?>);">

@@ -26,7 +26,7 @@ function custom_post_type() {
 
 	$args = array(
 		'label'               => __( 'Services', 'umbrella' ),
-		'description'         => __( 'Service news and reviews', 'umbrella' ),
+		'description'         => __( 'Services offered', 'umbrella' ),
 		'labels'              => $labels,
 		// Features this CPT supports in Post Editor
 		'supports'            => array( 'title', 'editor', 'thumbnail' ),
@@ -53,6 +53,15 @@ function custom_post_type() {
 
 	// Registering your Custom Post Type
 	register_post_type( 'Services', $args );
+	register_post_type(
+		'Clients', array(
+			'labels' => array('name' => __( 'Clients' ), 'singular_name' => __( 'Client' ) ),
+		      'public' => true,
+		      'has_archive' => true,
+		      'supports' => array('title', 'editor', 'thumbnail')
+		)
+	);
+
 
 }
 
@@ -104,3 +113,9 @@ function clean_custom_menus() {
 	}
 	echo $menu_list;
 }
+//upload svg
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');

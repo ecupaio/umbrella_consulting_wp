@@ -63,7 +63,7 @@ $(document).ready(function(){
     $('.contact-form-bg').attr('style','background-image: url('+mapUri+')');
     //Social Media Menu
     var social;
-    
+
     $('.social-link').each(function(i,obj) {
         social = $(this).attr('href');
         if (social.indexOf('facebook') > -1) {
@@ -96,4 +96,5 @@ $(document).ready(function(){
             }
            });
     });
+    
 });

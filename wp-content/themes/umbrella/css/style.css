@@ -100,12 +100,13 @@ body.customize-support #header {
         transform: scaleX(0);
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease; }
-      #header .nav a.nav-link:hover:before, #header .nav a.nav-link.active:before {
+      #header .nav a.nav-link.active:before, #header .nav a.nav-link:hover:before {
         visibility: visible;
         -webkit-transform: scaleX(1);
         transform: scaleX(1); }
   @media only screen and (max-width: 568px) {
-    #header .logo, #header .nav {
+    #header .logo,
+    #header .nav {
       float: none;
       width: 100%;
       text-align: center; } }
@@ -280,7 +281,7 @@ body.customize-support #header {
       z-index: 10; }
   #services #services-controls .slide-control {
     background: #fff;
-    height: 10em;
+    min-height: 5em;
     text-align: center;
     display: -webkit-box;
     display: -moz-box;
@@ -376,14 +377,17 @@ body.customize-support #header {
           -webkit-appearance: none; }
         #contact .contact-form-bg .form-container .form-field input.submit, #contact .contact-form-bg .form-container .form-field textarea.submit {
           white-space: normal; }
-      #contact .contact-form-bg .form-container .form-field input, #contact .contact-form-bg .form-container .form-field textarea {
+      #contact .contact-form-bg .form-container .form-field input,
+      #contact .contact-form-bg .form-container .form-field textarea {
         border: 2px solid #02416D;
         margin: 0.5em 0;
         transition: all 0.7s ease;
         -webkit-transition: all 0.7s ease;
         -moz-transition: all 0.7s ease;
         -o-transition: all 0.7s ease; }
-        #contact .contact-form-bg .form-container .form-field input:active, #contact .contact-form-bg .form-container .form-field input:focus, #contact .contact-form-bg .form-container .form-field textarea:active, #contact .contact-form-bg .form-container .form-field textarea:focus {
+        #contact .contact-form-bg .form-container .form-field input:active, #contact .contact-form-bg .form-container .form-field input:focus,
+        #contact .contact-form-bg .form-container .form-field textarea:active,
+        #contact .contact-form-bg .form-container .form-field textarea:focus {
           border: 2px solid #41CBEB; }
       #contact .contact-form-bg .form-container .form-field .submit {
         box-shadow: inset 0 0 0 2px #02416D; }
@@ -427,6 +431,27 @@ body.customize-support #header {
           -webkit-transform: translateX(0%); }
     #contact .contact-form-bg .form-redirect {
       display: none; }
+
+#clients {
+  text-align: center;
+  padding: 1em; }
+  #clients .client-grid {
+    justify-content: center;
+    align-items: center; }
+    #clients .client-grid > div {
+      padding: 1em; }
+  #clients .client-tile .client-logo img {
+    height: 5em;
+    width: auto;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: all 0.7s ease;
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    -o-transition: all 0.7s ease; }
+  #clients .client-tile .client-logo:hover img {
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%); }
 
 #footer {
   overflow: hidden; }
