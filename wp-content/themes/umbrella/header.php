@@ -40,7 +40,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-    
+
      <?php wp_head(); ?>
 </head>
 <body>
@@ -53,6 +53,7 @@
             <div class="nav">
                 <a class="nav-link" href="#about">Home</a>
                 <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#clients">Clients</a>
                 <a class="nav-link" href="#bio">Bio</a>
                 <a class="nav-link" href="#contact">Contact</a>
             </div>
