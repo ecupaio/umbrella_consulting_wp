@@ -93,6 +93,11 @@ add_theme_support( 'custom-logo', array(
 	'flex-width'  => true,
 	'header-text' => array( 'site-title', 'site-description' ),
 ) );
+function get_logo_url() {
+	$custom_logo_id = get_theme_mod( 'custom_logo' );
+	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+	echo $image[0];
+}
 function clean_custom_menus() {
 	$menu_name = 'footer-menu'; // specify custom menu slug
 	if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {

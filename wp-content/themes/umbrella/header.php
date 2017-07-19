@@ -9,18 +9,19 @@
     <title><?php bloginfo('name'); ?></title>
     <meta content="<?php bloginfo('description'); ?>" name="description">
     <!-- Facebook Meta -->
-    <meta property="og:url" content="Site URL">
+    <meta property="og:url" content="https://umbrellaconsulting.com">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Link Title">
-    <meta property="og:description" content="Link Description">
-    <meta property="og:image" content="Link Image">
+    <meta property="og:title" content="<?php bloginfo('name'); ?>">
+    <meta property="og:description" content="<?php bloginfo('description'); ?>">
+
+    <meta property="og:image" content="<?php get_logo_url(); ?>">
     <!-- Twitter Meta -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@TheDemocrats">
-    <meta name="twitter:creator" content="@TheDemocrats">
-    <meta name="twitter:title" content="Link Title">
-    <meta name="twitter:description" content="Link Description">
-    <meta name="twitter:image" content="Link Image">
+    <meta name="twitter:site" content="@umbrella_dc">
+    <meta name="twitter:creator" content="@umbrella_dc">
+    <meta name="twitter:title" content="<?php bloginfo('name'); ?>">
+    <meta name="twitter:description" content="<?php bloginfo('description'); ?>">
+    <meta name="twitter:image" content="<?php get_logo_url(); ?>">
     <!-- Pure CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">

@@ -13,6 +13,9 @@ module.exports = function(grunt) {
 				files: {
 				'style.css' : 'css/style.css'
 				}
+			},
+			options: {
+				 keepSpecialComments: 1
 			}
 		},
 		uglify: {
