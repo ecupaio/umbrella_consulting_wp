@@ -65,6 +65,9 @@ body.customize-support {
             height: 100%;
             width: auto;
         }
+        @include bp-medium($size-medium){
+            display: none;
+        }
     }
 
     .nav {
@@ -201,7 +204,11 @@ body.customize-support {
         @include flexbox;
         justify-content: center;
         align-items: center;
-
+        .site-logo {
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+        }
         .section-text {
             text-align: center;
         }
@@ -210,21 +217,31 @@ body.customize-support {
 
 #bio {
     position: relative;
-    background-size: cover;
-    background-position: right top;
-    background-attachment: local;
+
     padding: 0;
     background-color: $primary_color;
 
     .section-content {
-        background: linear-gradient(to right, rgba($primary_color,0.8) 50%, transparent);
+
         width: 100%;
         z-index: 10;
         overflow: auto;
 
         .section-text {
+
+
+        }
+        .bio-section {
+
             padding: 1em 2em;
-            width: 50%;
+        }
+        .bio-img {
+            background-size: cover;
+            background-position: center top;
+            background-attachment: local;
+            background-repeat: no-repeat;
+            min-height: 500px;
+            
         }
     }
     color: $white;
@@ -233,18 +250,13 @@ body.customize-support {
 
         .section-content {
             background: rgba($primary_color,0.5);
-
-            .section-text {
-                width: 100%;
-                margin-top: 10em;
-            }
         }
     }
     @include bp-small($size-small) {
-        background-position: 90% top;
+
 
         .section-content .section-text {
-            margin-top: 15em;
+
         }
     }
 }

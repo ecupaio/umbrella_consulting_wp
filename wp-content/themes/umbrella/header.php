@@ -9,7 +9,7 @@
     <title><?php bloginfo('name'); ?></title>
     <meta content="<?php bloginfo('description'); ?>" name="description">
     <!-- Facebook Meta -->
-    <meta property="og:url" content="https://umbrellaconsulting.com">
+    <meta property="og:url" content="https://umbrellaconsultingllc.com">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?php bloginfo('name'); ?>">
     <meta property="og:description" content="<?php bloginfo('description'); ?>">

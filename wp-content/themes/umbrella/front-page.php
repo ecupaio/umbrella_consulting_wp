@@ -5,7 +5,9 @@
         <div class="section" id="about" style="background-image: url(<?php the_field('about_image');?>)">
             <div class="section-content">
                 <div class="section-text">
-                    <?php the_custom_logo(); ?>
+
+
+                    <img class="site-logo" src="<?php the_field('site_logo');?>">
                     <?php the_field('about');?>
                     <a class="pure-button anchor-link" href="#services">What we do</a>
                 </div>
@@ -46,7 +48,8 @@
     </div>
     <!-- Clients -->
     <div class="section" id="clients">
-        <h1>Clients</h1>
+        <?php get_page(6);?>
+            <?php the_field('clients');?>
         <div class="client-grid pure-g">
         <?php
             $query = new WP_Query( array( 'post_type' => 'clients') );
@@ -63,13 +66,16 @@
     </div>
     <!-- Bio -->
     <?php get_page(6);?>
-    <div class="section" id="bio" style="background-image: url(<?php the_field('bio_image');?>);">
-        <div class="section-content">
-            <div class="section-text">
+    <div class="section" id="bio" >
+        <div class="section-content pure-g">
+            <div class="section-text bio-text bio-section pure-u-1 pure-u-md-1-2">
                 <?php the_field('bio');?>
+            </div>
+            <div class="bio-img bio-section pure-u-1 pure-u-md-1-2" data-bio-img='<?php the_field('bio_image');?>' style="background-image: linear-gradient(to right,rgba(2,65,109,1),transparent 50%),url(<?php the_field('bio_image');?>);">
             </div>
         </div>
     </div>
+
     <!-- Contact -->
     <?php get_page(6);?>
     <div class="section" id="contact" >

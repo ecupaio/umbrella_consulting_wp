@@ -77,6 +77,9 @@ body.customize-support #header {
     #header .logo img {
       height: 100%;
       width: auto; }
+    @media only screen and (max-width: 768px) {
+      #header .logo {
+        display: none; } }
   #header .nav {
     float: right;
     font-family: "Lato", sans-serif;
@@ -207,38 +210,35 @@ body.customize-support #header {
   display: flex;
   justify-content: center;
   align-items: center; }
+  #about .section-content .site-logo {
+    max-width: 340px;
+    width: 100%;
+    height: auto; }
   #about .section-content .section-text {
     text-align: center; }
 
 #bio {
   position: relative;
-  background-size: cover;
-  background-position: right top;
-  background-attachment: local;
   padding: 0;
   background-color: #02416D;
   color: #fff; }
   #bio .section-content {
-    background: linear-gradient(to right, rgba(2, 65, 109, 0.8) 50%, transparent);
     width: 100%;
     z-index: 10;
     overflow: auto; }
-    #bio .section-content .section-text {
-      padding: 1em 2em;
-      width: 50%; }
+    #bio .section-content .bio-section {
+      padding: 1em 2em; }
+    #bio .section-content .bio-img {
+      background-size: cover;
+      background-position: center top;
+      background-attachment: local;
+      background-repeat: no-repeat;
+      min-height: 500px; }
   @media only screen and (max-width: 768px) {
     #bio {
       background-size: auto 100%; }
       #bio .section-content {
-        background: rgba(2, 65, 109, 0.5); }
-        #bio .section-content .section-text {
-          width: 100%;
-          margin-top: 10em; } }
-  @media only screen and (max-width: 568px) {
-    #bio {
-      background-position: 90% top; }
-      #bio .section-content .section-text {
-        margin-top: 15em; } }
+        background: rgba(2, 65, 109, 0.5); } }
 
 #services {
   -webkit-box-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);

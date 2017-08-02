@@ -98,6 +98,11 @@ function get_logo_url() {
 	$image = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 	echo $image[0];
 }
+function meta_img() {
+	$icon = get_site_icon_url();
+	echo $icon;
+}
+
 function clean_custom_menus() {
 	$menu_name = 'footer-menu'; // specify custom menu slug
 	if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])) {

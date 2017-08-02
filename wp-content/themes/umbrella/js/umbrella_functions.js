@@ -96,5 +96,20 @@ $(document).ready(function(){
             }
            });
     });
-    
+    var bioImage = $('.bio-img').data('bio-img');
+    function bioImg() {
+
+        if ($(this).width() <= 768) {
+            $('.bio-img').attr('style','background-image: linear-gradient(to bottom,rgba(2,65,109,1),transparent 25%),url('+bioImage+')');
+        } else {
+            $('.bio-img').attr('style','background-image: linear-gradient(to right,rgba(2,65,109,1),transparent 50%),url('+bioImage+')');
+        }
+    }
+    $(window).on('resize',function(){
+        bioImg();
+    });
+    $(window).on('load',function(){
+        bioImg();
+    });
+
 });
